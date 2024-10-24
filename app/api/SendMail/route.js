@@ -16,18 +16,17 @@ export async function GET(req) {
         }
       );
     }
-    const transporter = nodemailer.createTransport({
-      host: "smtp.zoho.com",
+     const transporter = nodemailer.createTransport({
+      host: "mail.brandingemocion.net",
       port: 465,
       secure: true,
       auth: {
-        user: "notification@brandingemocion.com",
-        pass: "Iqs7qy%y",
+        user: "notificacion@brandingemocion.net",
+        pass: "noti@2024",
       },
     });
-
     let mensaje = {
-      from: "notification@brandingemocion.com",
+      from: "notificacion@brandingemocion.net",
       to: `${data?.CorreoDestino}`,
       subject: `🎉🥳 ¡Solicitud de contacto: ${data?.Correo || ""} ! 🥳🎉`,
       //   text: "Hello",
